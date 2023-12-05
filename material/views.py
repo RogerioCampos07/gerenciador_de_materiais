@@ -3,7 +3,7 @@ from material.models import Material
 
 
 def index(request):
-    lista = Material.objects.all()
+    lista = Material.objects.order_by('-id')
     context = {'lista':lista}
     return render(request,'material/index.html',context)
 
