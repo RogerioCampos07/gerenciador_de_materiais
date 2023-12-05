@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de estoque</title>
+</head>
+<style>
+    table, th, td {
+      border:1px solid black;
+      
+    }
+</style>
+<body>
+    <header>
+        <span>Projeto Seven</span>
+        <nav>
+            <ul>
+                <li><a href="#">lista material</a></li>
+                <li><a href="#">Cadastra itens</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+                
+        <table style="width:80%">
+            <caption style="font-size: larger; font-weight: 600; text-align: left;margin-bottom: 5px;">Mercadorias</caption>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Descrição</th>
+                <th>Quantidade</th>
+            </tr>
+            
+            {% for material in lista %}
+                <tr>
+                    <td >{{material.nome}}</td>
+                    <td style="text-align: center;">{{material.preco}}</td>
+                    <td style="text-align: left;">{{material.descrição}}</td>
+                    <td style="text-align: center;">{{material.quantidade}}</td>
+                </tr>
+            {% endfor %}
+            
+        </table>
+
+    </main>
+    <footer></footer>
+    
+</body>
+</html>
